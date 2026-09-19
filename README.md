@@ -1,4 +1,4 @@
-# NER Document Analyzer 🔍
+# NER Document Analyzer 
 
 ![Java](https://img.shields.io/badge/Java-17%2B-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
 ![JavaFX](https://img.shields.io/badge/JavaFX-21.0.2-blue?style=for-the-badge)
@@ -9,14 +9,14 @@ A powerful, academic-grade **Java Desktop Application** built to automatically d
 
 ---
 
-## 📸 Application Screenshot
-*(Capture a screenshot of your app running, name it `screenshot.png`, place it in this folder, and it will appear here!)*
+## Application Screenshot
+*(Capture a screenshot of your app running, name it `image.png`, place it in this folder, and it will appear here!)*
 
 ![App Screenshot](image.png)
 
 ---
 
-## ✨ Key Features
+## Key Features
 * **Modern JavaFX Dashboard:** A clean, responsive desktop UI.
 * **Stanford NER Engine:** Accurately extracts complex entities using robust pre-trained CRF (Conditional Random Field) models.
 * **Smart Multi-Token Grouping:** Intelligently combines consecutive tokens (e.g. `Sundar` + `Pichai` becomes `Sundar Pichai` -> `PERSON`).
@@ -26,7 +26,7 @@ A powerful, academic-grade **Java Desktop Application** built to automatically d
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 * **Language:** Java (JDK 17+)
 * **UI Framework:** JavaFX 21.0.2
 * **Build System:** Apache Maven
@@ -36,7 +36,7 @@ A powerful, academic-grade **Java Desktop Application** built to automatically d
 
 ---
 
-## 🚀 How to Run the Project
+## How to Run the Project
 
 Follow these simple steps to download and run the application on your computer.
 
@@ -71,7 +71,7 @@ mvn exec:java -Dexec.mainClass=com.example.ner.Main
 
 ---
 
-## 🧪 Running Tests
+## Running Tests
 The project features a highly comprehensive JUnit 5 test suite validating the NLP grouping and UI logic. Run them via:
 ```bash
 mvn test
@@ -79,13 +79,13 @@ mvn test
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 ```text
 ner-document-analyzer/
 ├── pom.xml                      # Maven dependencies and JavaFX plugins
 ├── README.md                    # Project documentation
 ├── ACADEMIC_DOCUMENTATION.md    # Formal college/academic theoretical report
-├── screenshot.png               # Put your UI screenshot here!
+├── image.png                    # Put your UI screenshot here!
 ├── sample-documents/            # Demo documents to test the NER engine
 ├── src/
 │   ├── main/java/com/example/ner/
@@ -101,8 +101,3 @@ ner-document-analyzer/
 │       ├── main-view.fxml       # JavaFX XML Layout
 │       └── styles.css           # JavaFX CSS Styling
 ```
-
----
-
-## 📜 Academic Details
-This project was built as an academic submission for Natural Language Processing. For deep technical details regarding the implementation theories, entity models, architectures, and testing methodologies, refer to the included [`ACADEMIC_DOCUMENTATION.md`](ACADEMIC_DOCUMENTATION.md) file.
