@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.ner.ui.MainController" stylesheets="@styles.css">
+    
+    <!-- HEADER -->
+    <top>
+        <VBox spacing="10" styleClass="header-box">
+            <padding><Insets top="15" right="20" bottom="15" left="20"/></padding>
+            <Label text="NER DOCUMENT ANALYZER" styleClass="header-title"/>
+            <Label text="Stanford Named Entity Recognition Tool" styleClass="header-subtitle"/>
+            
+            <HBox spacing="10" style="-fx-padding: 10 0 0 0;">
+                <Button fx:id="analyzeBtn" text="Analyze Document" onAction="#onAnalyzeDocument" styleClass="primary-btn"/>
+                <Button fx:id="analyzeMultipleBtn" text="Analyze Multiple" onAction="#onAnalyzeMultiple" styleClass="secondary-btn"/>
+                <Button fx:id="clearBtn" text="Clear" onAction="#onClear" styleClass="clear-btn"/>
+            </HBox>
+        </VBox>
+    </top>
+    
+    <!-- MAIN CONTENT -->
+    <center>
+        <SplitPane dividerPositions="0.2, 0.6">
+            <!-- Left: Document List -->
+            <VBox>
+                <Label text="DOCUMENTS" styleClass="section-header"/>
+                <ListView fx:id="documentList" VBox.vgrow="ALWAYS" styleClass="document-list"/>
+            </VBox>
+            
+            <!-- Middle: Original Text -->
+            <VBox>
+                <Label text="ORIGINAL DOCUMENT" styleClass="section-header"/>
+                <TextArea fx:id="documentText" VBox.vgrow="ALWAYS" wrapText="true" editable="false" styleClass="text-area"/>
+            </VBox>
+            
+            <!-- Right: Entities Table -->
+            <VBox>
+                <Label text="DETECTED ENTITIES" styleClass="section-header"/>
+                <TableView fx:id="entityTable" VBox.vgrow="ALWAYS">
+                    <columns>
+                        <TableColumn fx:id="entityCol" text="Entity" prefWidth="200"/>
+                        <TableColumn fx:id="typeCol" text="Type" prefWidth="120"/>
+                    </columns>
+                </TableView>
+            </VBox>
+        </SplitPane>
+    </center>
+    
+    <!-- BOTTOM -->
+    <bottom>
+        <VBox spacing="10" styleClass="bottom-box">
+            <padding><Insets top="15" right="20" bottom="15" left="20"/></padding>
+            
+            <HBox spacing="15" alignment="CENTER_LEFT">
+                <Label text="Search:"/>
+                <TextField fx:id="searchField" promptText="Search entity..." prefWidth="200"/>
+                <Button fx:id="searchBtn" text="Search" onAction="#onSearch"/>
+                
+                <Region HBox.hgrow="ALWAYS" />
+                
+                <Label text="Type Filter:"/>
+                <ComboBox fx:id="filterCombo" prefWidth="150"/>
+            </HBox>
+            
+            <Separator />
+            
+            <HBox spacing="20" alignment="CENTER_LEFT">
+                <Label fx:id="summaryDocsLabel" text="Documents: 0" styleClass="summary-label"/>
+                <Label fx:id="summaryEntitiesLabel" text="Entities: 0" styleClass="summary-label"/>
+                <Label fx:id="summaryProcessingLabel" text="Processing: 0 ms" styleClass="summary-label"/>
+                
+                <Region HBox.hgrow="ALWAYS" />
+                
+                <Label text="Export:"/>
+                <Button fx:id="exportCsvBtn" text="CSV" onAction="#onExportCsv"/>
+                <Button fx:id="exportJsonBtn" text="JSON" onAction="#onExportJson"/>
+                <Button fx:id="exportTxtBtn" text="TXT" onAction="#onExportTxt"/>
+            </HBox>
+            
+            <HBox spacing="10" alignment="CENTER_RIGHT" style="-fx-padding: 5 0 0 0;">
+                <Label fx:id="statusLabel" text="Status: Ready" styleClass="status-label"/>
+                <ProgressBar fx:id="progressBar" visible="false" prefWidth="150"/>
+            </HBox>
+        </VBox>
+    </bottom>
+</BorderPane>
