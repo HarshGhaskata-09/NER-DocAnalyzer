@@ -12,7 +12,7 @@ A powerful, academic-grade **Java Desktop Application** built to automatically d
 ## 📸 Application Screenshot
 *(Capture a screenshot of your app running, name it `screenshot.png`, place it in this folder, and it will appear here!)*
 
-![App Screenshot](screenshot.png)
+![App Screenshot](image.png)
 
 ---
 
@@ -36,32 +36,32 @@ A powerful, academic-grade **Java Desktop Application** built to automatically d
 
 ---
 
-## 🚀 How to Run the Project (Locally)
+## 🚀 How to Run the Project
 
-Follow these steps to clone, compile, and run the application on your computer.
+Follow these simple steps to download and run the application on your computer.
 
 ### Prerequisites
 1. You must have **Java 17** (or higher) installed.
 2. You must have **Apache Maven** installed and added to your system's `PATH`.
 
-### Step 1: Clone the Repository
-```bash
-git clone https://github.com/your-username/ner-document-analyzer.git
-cd ner-document-analyzer
-```
+### Step 1: Download the Project
+1. Go to the top of this GitHub page.
+2. Click the green **`<> Code`** button.
+3. Select **`Download ZIP`**.
+4. Extract the downloaded ZIP file to any folder on your computer.
 
-### Step 2: Compile the Code
-Download all the Stanford models and compile the JavaFX code by running:
+### Step 2: Open Terminal
+Open your Command Prompt or Terminal and navigate inside the extracted folder:
 ```bash
-mvn clean compile
+cd path/to/extracted/NER-DocAnalyzer-main
 ```
 
 ### Step 3: Launch the JavaFX Application!
 Run the desktop GUI by executing:
 ```bash
-mvn javafx:run
+mvn clean compile javafx:run
 ```
-*(The first time you click "Analyze Document", it may take a few seconds to load the 500MB Stanford CoreNLP model into memory).*
+*(The first time you click "Analyze Document", it may take a few seconds to load the Stanford CoreNLP model into memory).*
 
 ### Alternative: Console Version
 If you prefer to run the lightweight interactive terminal version without the GUI:
