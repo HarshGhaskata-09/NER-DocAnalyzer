@@ -10,8 +10,6 @@ A powerful, academic-grade **Java Desktop Application** built to automatically d
 ---
 
 ## Application Screenshot
-*(Capture a screenshot of your app running, name it `image.png`, place it in this folder, and it will appear here!)*
-
 ![App Screenshot](image.png)
 
 ---
